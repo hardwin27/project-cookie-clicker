@@ -6,7 +6,7 @@ public class ScoreController : MonoBehaviour
 {
     [SerializeField] private ScoreModel _model;
 
-    public void AddScore(int addedAmount)
+    public void AddScore(float addedAmount)
     {
         _model.AddScore(addedAmount);
     }

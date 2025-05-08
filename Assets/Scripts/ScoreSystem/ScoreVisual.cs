@@ -23,8 +23,8 @@ public class ScoreVisual : MonoBehaviour
         }
     }
 
-    private void UpdateScore(int score)
+    private void UpdateScore(float score)
     {
-        _scoreText.text = $"{score}";        
+        _scoreText.text = $"{Mathf.RoundToInt(score)}";        
     }
 }

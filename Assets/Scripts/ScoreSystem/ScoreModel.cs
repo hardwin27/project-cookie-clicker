@@ -4,13 +4,13 @@ using UnityEngine;
 using ReadOnlyParameter;
 public class ScoreModel : MonoBehaviour
 {
-    [SerializeField, ReadOnly] private int _currentScore;
+    [SerializeField, ReadOnly] private float _currentScore;
 
-    public int CurrentScore => _currentScore;
+    public float CurrentScore => _currentScore;
 
-    public Action<int> OnScoreUpdated;
+    public Action<float> OnScoreUpdated;
     
-    public void AddScore(int addedAmount)
+    public void AddScore(float addedAmount)
     {
         _currentScore += addedAmount;
         OnScoreUpdated?.Invoke(CurrentScore);
