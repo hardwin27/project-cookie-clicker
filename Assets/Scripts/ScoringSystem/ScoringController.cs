@@ -9,11 +9,15 @@ public class ScoringController : MonoBehaviour
     [SerializeField] private bool _isInitiallyAutoScoring;
     [SerializeField] private float _autoScoringValue;
 
+    [SerializeField] private float _autoScoringQuantity;
+    [SerializeField] private float _valueMultiplier;
+
     [SerializeField] private AutoScoreData _autoScoreData;
 
     private void Awake()
     {
-        _autoScoreData = new AutoScoreData(_scoreId, _autoScoringValue, _isInitiallyAutoScoring);
+        _autoScoreData = new AutoScoreData(_scoreId, _autoScoringValue, _isInitiallyAutoScoring,
+            _autoScoringQuantity, _valueMultiplier);
     }
 
     private void OnEnable()
@@ -28,6 +32,6 @@ public class ScoringController : MonoBehaviour
 
     public void InputValue()
     {
-        _scoreController.AddScore(_valuePerInput);
+        _scoreController.AddScore(_valuePerInput * _valueMultiplier);
     }
 }

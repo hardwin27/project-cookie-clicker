@@ -1097,10 +1097,14 @@ MonoBehaviour:
   _valuePerInput: 0
   _isInitiallyAutoScoring: 1
   _autoScoringValue: 2
+  _autoScoringQuantity: 2
+  _valueMultiplier: 1
   _autoScoreData:
     _scoreId: 
     _isAutoEnabled: 0
     _autoScoreValue: 0
+    _autoScoringQuantity: 0
+    _valueMultiplier: 0
 --- !u!114 &1531228720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1337,10 +1341,14 @@ MonoBehaviour:
   _valuePerInput: 1
   _isInitiallyAutoScoring: 1
   _autoScoringValue: 3
+  _autoScoringQuantity: 1
+  _valueMultiplier: 2
   _autoScoreData:
     _scoreId: 
     _isAutoEnabled: 0
     _autoScoreValue: 0
+    _autoScoringQuantity: 0
+    _valueMultiplier: 0
 --- !u!1 &2112241316
 GameObject:
   m_ObjectHideFlags: 0

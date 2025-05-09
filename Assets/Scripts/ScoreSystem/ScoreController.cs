@@ -18,7 +18,7 @@ public class ScoreController : MonoBehaviour
         {
             if (autoScoreData.IsAutoEnabled)
             {
-                autoScoreRate += autoScoreData.AutoScoreValue;
+                autoScoreRate += autoScoreData.GetValue();
             }
         }
 
