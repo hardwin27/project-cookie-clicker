@@ -16,10 +16,7 @@ public class ScoreController : MonoBehaviour
         float autoScoreRate = 0f;
         foreach (AutoScoreData autoScoreData in _model.AutoScoreDatas)
         {
-            if (autoScoreData.IsAutoEnabled)
-            {
-                autoScoreRate += autoScoreData.GetValue();
-            }
+            autoScoreRate += autoScoreData.GetValue();
         }
 
         _model.CurrentAutoScoreRate = autoScoreRate;

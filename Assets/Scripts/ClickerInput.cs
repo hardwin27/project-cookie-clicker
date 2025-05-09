@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class ClickerInput : MonoBehaviour
 {
-    [SerializeField] private ScoringController _scoringController;
+    [SerializeField] private GeneratorController _generatorController;
     [SerializeField] private Button _clickerButton;
 
     private void OnEnable()
@@ -18,6 +18,6 @@ public class ClickerInput : MonoBehaviour
 
     private void HandleClickerClickeed()
     {
-        _scoringController.InputValue();
+        _generatorController.InputValue();
     }
 }

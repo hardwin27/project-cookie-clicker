@@ -825,7 +825,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: AUTO
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1095,16 +1095,30 @@ MonoBehaviour:
   _scoreController: {fileID: 1287411388}
   _scoreId: auto1
   _valuePerInput: 0
-  _isInitiallyAutoScoring: 1
   _autoScoringValue: 2
-  _autoScoringQuantity: 2
-  _valueMultiplier: 1
+  _autoScoreQuantity:
+    _paramName: 
+    _paramDesc: 
+    _paramInitValue: 1
+    _paramValue: 0
+  _valueMultiplier:
+    _paramName: 
+    _paramDesc: 
+    _paramInitValue: 1
+    _paramValue: 0
   _autoScoreData:
     _scoreId: 
-    _isAutoEnabled: 0
     _autoScoreValue: 0
-    _autoScoringQuantity: 0
-    _valueMultiplier: 0
+    _autoScoringQuantity:
+      _paramName: 
+      _paramDesc: 
+      _paramInitValue: 0
+      _paramValue: 0
+    _valueMultiplier:
+      _paramName: 
+      _paramDesc: 
+      _paramInitValue: 0
+      _paramValue: 0
 --- !u!114 &1531228720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1199,8 +1213,8 @@ GameObject:
   - component: {fileID: 2028622807}
   - component: {fileID: 2028622806}
   - component: {fileID: 2028622805}
-  - component: {fileID: 2028622809}
   - component: {fileID: 2028622808}
+  - component: {fileID: 2028622809}
   m_Layer: 5
   m_Name: Clicker Input
   m_TagString: Untagged
@@ -1322,7 +1336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0d61bc6741f4f749ae3af3e89fa34f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scoringController: {fileID: 2028622809}
+  _generatorController: {fileID: 2028622809}
   _clickerButton: {fileID: 2028622805}
 --- !u!114 &2028622809
 MonoBehaviour:
@@ -1337,18 +1351,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scoreController: {fileID: 1287411388}
-  _scoreId: clicker
+  _scoreId: 
   _valuePerInput: 1
-  _isInitiallyAutoScoring: 1
-  _autoScoringValue: 3
-  _autoScoringQuantity: 1
-  _valueMultiplier: 2
+  _autoScoringValue: 1
+  _autoScoreQuantity:
+    _paramName: 
+    _paramDesc: 
+    _paramInitValue: 1
+    _paramValue: 0
+  _valueMultiplier:
+    _paramName: 
+    _paramDesc: 
+    _paramInitValue: 1
+    _paramValue: 0
   _autoScoreData:
     _scoreId: 
-    _isAutoEnabled: 0
     _autoScoreValue: 0
-    _autoScoringQuantity: 0
-    _valueMultiplier: 0
+    _autoScoringQuantity:
+      _paramName: 
+      _paramDesc: 
+      _paramInitValue: 0
+      _paramValue: 0
+    _valueMultiplier:
+      _paramName: 
+      _paramDesc: 
+      _paramInitValue: 0
+      _paramValue: 0
 --- !u!1 &2112241316
 GameObject:
   m_ObjectHideFlags: 0
