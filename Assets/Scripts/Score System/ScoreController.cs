@@ -6,6 +6,8 @@ public class ScoreController : MonoBehaviour
 {
     [SerializeField] private ScoreModel _model;
 
+    public float CurrentScore => _model.CurrentScore;
+
     private void Update()
     {
         HandleAutoScoring();
