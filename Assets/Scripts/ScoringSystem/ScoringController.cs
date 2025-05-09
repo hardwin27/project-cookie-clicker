@@ -4,23 +4,26 @@ public class ScoringController : MonoBehaviour
 {
     [SerializeField] private ScoreController _scoreController;
 
+    [SerializeField] private string _scoreId;
     [SerializeField] private float _valuePerInput;
-    [SerializeField] private bool _hasAutoScoring;
+    [SerializeField] private bool _isInitiallyAutoScoring;
     [SerializeField] private float _autoScoringValue;
 
-    private void Update()
+    [SerializeField] private AutoScoreData _autoScoreData;
+
+    private void Awake()
     {
-        HandleAutoScoring();
+        _autoScoreData = new AutoScoreData(_scoreId, _autoScoringValue, _isInitiallyAutoScoring);
     }
 
-    private void HandleAutoScoring()
+    private void OnEnable()
     {
-        if (!_hasAutoScoring)
-        {
-            return;
-        }
+        _scoreController.AddAutoScoreData(_autoScoreData);
+    }
 
-        _scoreController.AddScore(_autoScoringValue * Time.deltaTime);
+    private void OnDisable()
+    {
+        _scoreController.RemoveAutoScoreData(_autoScoreData);
     }
 
     public void InputValue()

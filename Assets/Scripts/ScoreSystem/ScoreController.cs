@@ -6,8 +6,38 @@ public class ScoreController : MonoBehaviour
 {
     [SerializeField] private ScoreModel _model;
 
+    private void Update()
+    {
+        HandleAutoScoring();
+    }
+
+    private void HandleAutoScoring()
+    {
+        float autoScoreRate = 0f;
+        foreach (AutoScoreData autoScoreData in _model.AutoScoreDatas)
+        {
+            if (autoScoreData.IsAutoEnabled)
+            {
+                autoScoreRate += autoScoreData.AutoScoreValue;
+            }
+        }
+
+        _model.CurrentAutoScoreRate = autoScoreRate;
+        AddScore(_model.CurrentAutoScoreRate * Time.deltaTime);
+    }
+
     public void AddScore(float addedAmount)
     {
         _model.AddScore(addedAmount);
+    }
+
+    public void AddAutoScoreData(AutoScoreData autoScoreData)
+    {
+        _model.AddAutoScoreData(autoScoreData);
+    }
+
+    public void RemoveAutoScoreData(AutoScoreData autoScoreData)
+    {
+        _model.RemoveAutoScoreData(autoScoreData);
     }
 }
