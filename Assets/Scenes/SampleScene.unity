@@ -1096,29 +1096,13 @@ MonoBehaviour:
   _scoreId: auto1
   _valuePerInput: 0
   _autoScoringValue: 2
-  _autoScoreQuantity:
-    _paramName: 
-    _paramDesc: 
-    _paramInitValue: 1
-    _paramValue: 0
-  _valueMultiplier:
-    _paramName: 
-    _paramDesc: 
-    _paramInitValue: 1
-    _paramValue: 0
+  _autoScoreQuantity: 1
+  _valueMultiplier: 2
   _autoScoreData:
     _scoreId: 
     _autoScoreValue: 0
-    _autoScoringQuantity:
-      _paramName: 
-      _paramDesc: 
-      _paramInitValue: 0
-      _paramValue: 0
-    _valueMultiplier:
-      _paramName: 
-      _paramDesc: 
-      _paramInitValue: 0
-      _paramValue: 0
+    _autoScoringQuantity: 0
+    _valueMultiplier: 0
 --- !u!114 &1531228720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1354,29 +1338,13 @@ MonoBehaviour:
   _scoreId: 
   _valuePerInput: 1
   _autoScoringValue: 1
-  _autoScoreQuantity:
-    _paramName: 
-    _paramDesc: 
-    _paramInitValue: 1
-    _paramValue: 0
-  _valueMultiplier:
-    _paramName: 
-    _paramDesc: 
-    _paramInitValue: 1
-    _paramValue: 0
+  _autoScoreQuantity: 1
+  _valueMultiplier: 2
   _autoScoreData:
     _scoreId: 
     _autoScoreValue: 0
-    _autoScoringQuantity:
-      _paramName: 
-      _paramDesc: 
-      _paramInitValue: 0
-      _paramValue: 0
-    _valueMultiplier:
-      _paramName: 
-      _paramDesc: 
-      _paramInitValue: 0
-      _paramValue: 0
+    _autoScoringQuantity: 0
+    _valueMultiplier: 0
 --- !u!1 &2112241316
 GameObject:
   m_ObjectHideFlags: 0

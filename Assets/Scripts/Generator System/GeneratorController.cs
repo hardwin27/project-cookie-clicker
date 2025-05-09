@@ -10,8 +10,8 @@ public class GeneratorController : MonoBehaviour
     [SerializeField] protected float _valuePerInput;
     [SerializeField] protected float _autoScoringValue;
 
-    [SerializeField] protected GeneratorParameter _autoScoreQuantity;
-    [SerializeField] protected GeneratorParameter _valueMultiplier;
+    [SerializeField] protected float _autoScoreQuantity;
+    [SerializeField] protected float _valueMultiplier;
 
     [SerializeField] protected AutoScoreData _autoScoreData;
 
@@ -21,8 +21,6 @@ public class GeneratorController : MonoBehaviour
 
     protected void Awake()
     {
-        InitializeParamters();
-
         _autoScoreData = new AutoScoreData(_scoreId, _autoScoringValue,
             _autoScoreQuantity, _valueMultiplier);
     }
@@ -37,17 +35,8 @@ public class GeneratorController : MonoBehaviour
         _scoreController.RemoveAutoScoreData(_autoScoreData);
     }
 
-    protected virtual void InitializeParamters()
-    {
-        _autoScoreQuantity.ResetParameter();
-        _valueMultiplier.ResetParameter();
-
-        _parameters.Add("autoScoreQuantity", _autoScoreQuantity);
-        _parameters.Add("_valueMultiplier", _valueMultiplier);
-    }
-
     public void InputValue()
     {
-        _scoreController.AddScore(_valuePerInput * _valueMultiplier.Value);
+        _scoreController.AddScore(_valuePerInput * _valueMultiplier);
     }
 }

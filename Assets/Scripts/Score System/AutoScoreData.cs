@@ -8,13 +8,13 @@ public class AutoScoreData
 {
     [SerializeField, ReadOnly] private string _scoreId;
     [SerializeField, ReadOnly] private float _autoScoreValue;
-    [SerializeField, ReadOnly] private GeneratorParameter _autoScoringQuantity;
-    [SerializeField, ReadOnly] private GeneratorParameter _valueMultiplier;
+    [SerializeField, ReadOnly] private float _autoScoringQuantity;
+    [SerializeField, ReadOnly] private float _valueMultiplier;
 
     public string ScoreId => _scoreId;
 
-    public AutoScoreData(string scoreId, float autoScoreValue, GeneratorParameter autoScoringQuantity, 
-        GeneratorParameter valueMultiplier) 
+    public AutoScoreData(string scoreId, float autoScoreValue, float autoScoringQuantity,
+        float valueMultiplier) 
     { 
         _scoreId = scoreId;
         _autoScoreValue = autoScoreValue;
@@ -24,6 +24,6 @@ public class AutoScoreData
 
     public float GetValue()
     {
-        return _autoScoreValue * _autoScoringQuantity.Value * _valueMultiplier.Value;
+        return _autoScoreValue * _autoScoringQuantity * _valueMultiplier;
     }
 }
