@@ -9,10 +9,14 @@ public class GeneratorUpgrader : MonoBehaviour
     [SerializeField] protected float _initialGeneratorPrice;
     [SerializeField] protected float _generatorPriceIncrease;
     [SerializeField, ReadOnly] protected float _currentGeneratorPrice;
+
     [SerializeField] private float _multiplierUpgradePrice;
     [SerializeField, ReadOnly] private bool _hasMultiplierUpgraded = false;
 
     public float GeneratorPrice => _currentGeneratorPrice;
+    public float MultiplierUpgradePrice => _multiplierUpgradePrice;
+    public GeneratorController GeneratorController => _generatorController;
+    public bool HasMultiplierUpgraded => _hasMultiplierUpgraded;
 
     protected void Start()
     {
@@ -27,6 +31,8 @@ public class GeneratorUpgrader : MonoBehaviour
 
     public void BuyAutoGenerator()
     {
+        Debug.Log($"BuyAutoGenerator");
+
         if (_scoreController.CurrentScore >= GeneratorPrice)
         {
             _scoreController.AddScore(-GeneratorPrice);
@@ -37,6 +43,8 @@ public class GeneratorUpgrader : MonoBehaviour
 
     public void BuyMultiplierUpgrade()
     {
+        Debug.Log($"BuyMultiplierUpgrade");
+
         if (!_hasMultiplierUpgraded)
         {
             if (_scoreController.CurrentScore >= _multiplierUpgradePrice)

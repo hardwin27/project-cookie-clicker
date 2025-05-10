@@ -17,6 +17,7 @@ public class GeneratorController : MonoBehaviour
 
     public float AutoScoreQuantity => _autoScoreData == null ? 0 : _autoScoreData.AutoScoreQuantity;
     public float ValueMultiplier => _autoScoreData == null ? 0 : _autoScoreData.ValueMultiplier;
+    public AutoScoreData AutoScoreData => _autoScoreData;
 
 
     protected void Awake()
